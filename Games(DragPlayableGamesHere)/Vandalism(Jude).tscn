@@ -1,16 +1,82 @@
-[gd_scene format=3 uid="uid://ob8crc5jmi0n"]
+[gd_scene format=4 uid="uid://c66dy58nn2n7a"]
 
 [ext_resource type="Script" uid="uid://d28a1gihixqie" path="res://DebugSampleGames/Scripts/MicroGameRoot.gd" id="1_ot2hq"]
-[ext_resource type="Script" uid="uid://bwtk00eaqm1dj" path="res://Frameworks(YourStuff)/Jude/BasePlate/game.gd" id="2_juuyt"]
-[ext_resource type="Texture2D" uid="uid://clj05tcdxmbnf" path="res://Frameworks(YourStuff)/Jude/BasePlate/icon.jpg" id="3_dq703"]
+[ext_resource type="Script" uid="uid://40rx4l3n4tpp" path="res://Frameworks(YourStuff)/Jude/ShakeColors/SprayPaint.gd" id="2_ljf61"]
+[ext_resource type="Script" uid="uid://bwl6hjy15q3lo" path="res://Frameworks(YourStuff)/Jude/ShakeColors/playerreal.gd" id="3_vj70r"]
+[ext_resource type="PackedScene" uid="uid://hphh2enc663v" path="res://Frameworks(YourStuff)/Jude/ShakeColors/spray.blend" id="4_yiy5i"]
+[ext_resource type="AudioStream" uid="uid://d2xf13c8te4c2" path="res://Frameworks(YourStuff)/Jude/ShakeColors/interactiveshaking.wav" id="5_70f1w"]
+[ext_resource type="Script" uid="uid://b4fj1d4elefsl" path="res://Frameworks(YourStuff)/Jude/ShakeColors/shake_holder.gd" id="6_prm7q"]
+[ext_resource type="Texture2D" uid="uid://xkjtisir6wev" path="res://Frameworks(YourStuff)/Jude/ShakeColors/2.png" id="7_uyfn3"]
+[ext_resource type="Script" uid="uid://bu37gy38007yx" path="res://Frameworks(YourStuff)/Jude/ShakeColors/stat.gd" id="8_0jcem"]
+[ext_resource type="AudioStream" uid="uid://p6p62b1ve5dj" path="res://Frameworks(YourStuff)/Jude/ShakeColors/ding.wav" id="9_5ygj8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lwjk5"]
+radius = 0.24023438
+height = 1.0419922
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g1ecg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jcem"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vcwi6"]
+radius = 14.259209
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5ygj8"]
+
+[sub_resource type="Sky" id="Sky_yik30"]
+sky_material = SubResource("ProceduralSkyMaterial_5ygj8")
+
+[sub_resource type="Environment" id="Environment_h26no"]
+background_mode = 2
+sky = SubResource("Sky_yik30")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sg72q"]
+albedo_texture = ExtResource("7_uyfn3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rs2rx"]
+resource_name = "1"
+cull_mode = 2
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eo1av"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 0.09970045, 2, 2),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAwAEAAIABAAAAAIABQADAAEABAADAAUAAAAGAAEABQABAAYABAAHAAAABAAFAAcACAAAAAcACQAGAAAACQAAAAgACgAFAAYACgAGAAkACwAHAAUACwAFAAoACAAHAAsACQAMAAoACwANAAgACAAOAAkACQAOAAwACAANAA4ACgAMAA8ACgAPAAsADwAMAA4ACwAPAA0ADwAOAA0A"),
+"name": "1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//9Y/6YAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAP//pgBY/wAA//9Y/1j/AAD//6YApgAAAP//M+rLFQAA//8z6jPqAAD//8sVM+oAAP//yxXLFQAAlHvLFTPqAACUezPqyxUAAJR7M+oz6gAAlHvLFcsVAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_icnx6"]
+resource_name = "paintings_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 0.09970045, 2, 2),
+"attribute_data": PackedByteArray("NtAlv0zwkp9M8CW/NtCSnyCwkp820P9/NtCSnyCw/38gsEv+NtC43jbQS/4gsLjeCpAlvyCwkp8gsCW/CpCSn4mLOImJiz71iYs+9YmLOIkgsLjeNtAlvzbQuN4gsCW/c/U4if////9z9T71/oD+////d36Jiz71iYs4if6Ad35z9T71iYs4iXP1OImJiz71c/U4iYmLOImJiziJc/U4iXP1PvVz9TiJc/U4iXP1PvWJiz71c/U+9XP1PvWJiz71"),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGgAZABsAGAAcABkAGgAbAB0AHgAcABgAHQAbAB8AHgAfABwAHQAfAB4AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": SubResource("StandardMaterial3D_rs2rx"),
+"name": "1",
+"primitive": 3,
+"uv_scale": Vector4(1.994588, 2.0269492, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("//9Y/6YAJ/0AAP/////r/wAA//8AABD9//9Y/1j//////6YAWP8GwAAA/////wbA//9Y/1j/BsAAAAAA//8GwAAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTVAAAAAAAAGMD//6YAWP//v///pgCmABrAAAAAAP///7///zPqM+oAAJR7yxUz6gAA///LFTPqAACUezPqM+oAAAAAAAAAAIf+//9Y/6YAh/4AAP//AACH/v//pgCmAIf+//8z6ssV/7///6YApgD/v///yxXLFf+///+mAFj//7///1j/pgD/v///yxUz6v+///8z6jPq/7///1j/WP//v5R7yxXLFf+/lHsz6jPq/7+UezPqyxX/v5R7yxUz6v+///8z6ssV/z+UezPqM+r/P///M+oz6v8/lHsz6ssV/z///8sVyxX+f5R7M+rLFf5///8z6ssV/n+Ue8sVyxX+f///yxUz6v8/lHvLFcsV/z///8sVyxX/P5R7yxUz6v8/AEAaANE+GAMMQAAAskrOAxoDGgMaAxoDGgMaAxoDGgNU1VTVVNVU1VTVVNVU1VTVNQDMeQIGy3kBAMx5MwbKef///3////9/////f////38xPzE/MT8xPzE/MT8xPzE//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAAAD/fwAA/38AAP9/AAD/f/9/////f////3////9///////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eo1av")
 
 [node name="GameRoot" type="Node2D" unique_id=2067474409]
 script = ExtResource("1_ot2hq")
 
 [node name="Game" type="Node2D" parent="." unique_id=582359250]
-script = ExtResource("2_juuyt")
+script = ExtResource("2_ljf61")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game" unique_id=47162102]
+[node name="Description" type="RichTextLabel" parent="Game" unique_id=47162102]
 visible = false
 offset_right = 1153.0
 offset_bottom = 646.0
@@ -32,18 +98,134 @@ text = "Time Left:
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Game" unique_id=437249478]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Game" unique_id=357351056]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="Game/SubViewportContainer" unique_id=1118663380]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1588110183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30513, -0.25854492, -1.0651855)
+size = Vector3(5.8591614, 0.48291016, 5.932129)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1306000328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19911194, 0.8609619, -3.1084166)
+size = Vector3(5.6471252, 2.7219238, 3.086792)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=391332752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2828484, 0.8609619, -1.0817566)
+size = Vector3(1.4796524, 2.7219238, 5.898987)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=858221429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9425082, 0.8609619, -1.0817566)
+size = Vector3(1.4796524, 2.7219238, 5.898987)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=169728494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45377874, 0.8609619, 1.5297699)
+size = Vector3(4.4571114, 2.7219238, 0.67593384)
+
+[node name="Player" type="CharacterBody3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1240587925 groups=["player"]]
+collision_layer = 2
+script = ExtResource("3_vj70r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=369986665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47900403, 0)
 visible = false
-offset_left = 455.0
-offset_top = 380.0
-offset_right = 716.0
-offset_bottom = 444.0
-text = "continue on"
+shape = SubResource("CapsuleShape3D_lwjk5")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1658443706]
-position = Vector2(577, 138)
-scale = Vector2(0.052373398, 0.052373398)
-texture = ExtResource("3_dq703")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=2059082982]
+visible = false
+mesh = SubResource("CapsuleMesh_g1ecg")
 
-[connection signal="start_game" from="." to="Game" method="_on_test_1_start_game"]
-[connection signal="pressed" from="Game/Button" to="Game" method="_on_button_pressed"]
+[node name="Camera3D" type="Camera3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=61123537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64104, 0)
+fov = 80.0
+
+[node name="spray" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=2016465519 instance=ExtResource("4_yiy5i")]
+transform = Transform3D(-0.12514287, 1.5892198e-15, 1.8896051e-08, -7.3532087e-09, 0.115278944, -0.0486981, -1.7406636e-08, -0.0486981, -0.115278944, 0.44090378, -0.54883087, -0.26448578)
+
+[node name="Cylinder" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D/spray" index="0" unique_id=703352690]
+layers = 2
+
+[node name="RayCast3D" type="RayCast3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=935598511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066599846, 0)
+target_position = Vector3(0, 0, -5)
+collision_mask = 9
+collide_with_areas = true
+debug_shape_thickness = 1
+
+[node name="Hold" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=1265386443]
+transform = Transform3D(-1, 0, -8.742278e-08, 2.6057059e-08, 0.95454776, -0.29805803, 8.3449216e-08, -0.29805803, -0.95454776, 0.45639068, -0.5116388, -0.4133594)
+
+[node name="Gone" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=725364921]
+transform = Transform3D(1, 0, 0, 0, 0.4452604, 0.8954011, 0, -0.8954011, 0.4452604, 0.45639068, -0.9436863, 0.1336425)
+
+[node name="Shoot" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=1254703258]
+transform = Transform3D(-0.91803163, 0, -0.39650717, 0.14981659, 0.9258706, -0.3468698, 0.36711434, -0.3778408, -0.8499785, 0.16003448, -0.6915858, -0.3634504)
+
+[node name="Hand" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=2117977322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0255799, 0.5814272, -0.021744639)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport/Player/Hand" unique_id=877692671]
+size = Vector3(0.2833252, 0.63391113, 0.22558594)
+
+[node name="Death" type="AudioStreamPlayer" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=2037566475]
+stream = ExtResource("5_70f1w")
+volume_db = -8.0
+
+[node name="ShakeHolder" type="Node2D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=722481090]
+position = Vector2(606, -42)
+script = ExtResource("6_prm7q")
+
+[node name="ProgressBar" type="ProgressBar" parent="Game/SubViewportContainer/SubViewport/Player/ShakeHolder" unique_id=274503480]
+offset_left = -124.0
+offset_right = 130.0
+offset_bottom = 27.0
+pivot_offset = Vector2(126, 15)
+show_percentage = false
+
+[node name="SprayWall" type="StaticBody3D" parent="Game/SubViewportContainer/SubViewport" unique_id=34328576 groups=["SprayWall"]]
+script = ExtResource("8_0jcem")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=1878461872 groups=["interact"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0053100586, 0.6400757, -0.26953125)
+shape = SubResource("BoxShape3D_0jcem")
+disabled = true
+
+[node name="Timer" type="Timer" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=535407756]
+wait_time = 0.05
+autostart = true
+
+[node name="Area3D" type="Area3D" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=283729313]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/SubViewportContainer/SubViewport/SprayWall/Area3D" unique_id=400221431]
+shape = SubResource("SphereShape3D_vcwi6")
+debug_color = Color(0, 0.64705884, 0.24313726, 0.7294118)
+
+[node name="sing" type="AudioStreamPlayer3D" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=431666805]
+stream = ExtResource("9_5ygj8")
+volume_db = -30.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1869313255]
+transform = Transform3D(1, 0, 0, 0, 0.5286606, 0.8488333, 0, -0.8488333, 0.5286606, 0, 2.2073548, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Game/SubViewportContainer/SubViewport" unique_id=677707403]
+environment = SubResource("Environment_h26no")
+
+[node name="paintings" type="Node3D" parent="Game/SubViewportContainer" unique_id=1122347425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3513836, 0, -9.791424)
+
+[node name="Cube" type="MeshInstance3D" parent="Game/SubViewportContainer/paintings" unique_id=904135161]
+transform = Transform3D(-2.7145099e-08, 0, -0.62100744, 0, 0.7642592, 0, 0.62100744, 0, -2.7145099e-08, 1.6014826, 1.0216051, 8.844153)
+material_override = SubResource("StandardMaterial3D_sg72q")
+mesh = SubResource("ArrayMesh_icnx6")
+
+[connection signal="start_game" from="." to="Game" method="_on_game_root_start_game"]
+[connection signal="timeout" from="Game/SubViewportContainer/SubViewport/SprayWall/Timer" to="Game/SubViewportContainer/SubViewport/SprayWall" method="_on_timer_timeout"]
+
+[editable path="Game/SubViewportContainer/SubViewport/Player/Camera3D/spray"]

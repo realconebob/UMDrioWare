@@ -17,7 +17,6 @@ func _on_test_1_start_game() -> void:
 	button.show()
 	timer = 2/GameRoot.get_intensity()
 	await time_done
-	print('time done')
 	GameRoot.end_game.emit(won) #defaults to false if button is not pressed
 
 func _process(delta: float) -> void:

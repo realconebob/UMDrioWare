@@ -1,10 +1,16 @@
 class_name MicroGameRoot extends Node2D
 
-@onready var game_manager: GameManager = get_parent()
+var game_manager: GameManager
 
 signal game_finished(game_root : Node, won : bool)
 signal start_game
 signal end_game(won : bool)
+
+func _ready() -> void:
+	if get_parent() is Window:
+		pass
+	else:
+		game_manager = get_parent()
 
 func _start_game():
 	end_game.connect(_end_game, 1)
@@ -15,4 +21,5 @@ func _end_game(won : bool):
 	game_finished.emit(self, won)
 
 func get_intensity():
-	return game_manager.game_intensity
+	if game_manager: return game_manager.game_intensity
+		
