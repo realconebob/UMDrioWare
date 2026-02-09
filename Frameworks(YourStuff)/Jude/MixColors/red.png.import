@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kypjakvvurla"
-path="res://.godot/imported/red.png-57684c3f06d9ae188fa68c00bfc8bd12.ctex"
+path="res://.godot/imported/red.png-467432d3cc6c00357edd0568045ceeda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Frameworks(YourStuff)/Jude/ShakeColors/red.png"
-dest_files=["res://.godot/imported/red.png-57684c3f06d9ae188fa68c00bfc8bd12.ctex"]
+source_file="res://Frameworks(YourStuff)/Jude/MixColors/red.png"
+dest_files=["res://.godot/imported/red.png-467432d3cc6c00357edd0568045ceeda.ctex"]
 
 [params]
 

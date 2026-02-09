@@ -24,5 +24,5 @@ func get_intensity():
 	if game_manager: 
 		return game_manager.game_intensity
 	else:
-		return 0.2 #testing mode
+		return 1.0 #testing mode
 		

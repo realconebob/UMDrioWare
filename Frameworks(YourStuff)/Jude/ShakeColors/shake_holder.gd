@@ -18,14 +18,15 @@ func toggle(on):
 	#on = !on
 	var tween = get_tree().create_tween()
 	if on:
-		tween.tween_property(self, "position:y", 30.0, .5)
+		tween.tween_property(self, "position:y", 31.0, .5)
 	else:
-		tween.tween_property(self, "position:y", -70.0, .5)
+		tween.tween_property(self, "position:y", -30.0, .5)
 
 var off = false
 func add_amount(amount):
 	if off: return
 	progress_bar.value = amount
+	print(progress_bar.value, progress_bar.max_value)
 	position += Vector2.ONE * randf_range(-1,1)
 	progress_bar.modulate = Color.RED
 	

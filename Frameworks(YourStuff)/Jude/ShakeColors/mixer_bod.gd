@@ -3,7 +3,6 @@ class_name MixerBod extends CharacterBody2D
 var mix_state = false
 var mix_level = 0.0
 var mixing = false
-@onready var player: Player = $"../../../.."
 @onready var texture_rect: TextureRect = $"../TextureRect"
 @onready var mixing_sfx: AudioStreamPlayer = $MixingSFX
 @onready var progressmix: ProgressBar = $"../progressmix"

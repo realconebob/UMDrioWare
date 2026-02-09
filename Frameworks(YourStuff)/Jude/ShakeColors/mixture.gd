@@ -2,15 +2,17 @@ class_name Mixture extends RigidBody2D
 
 @onready var polygon_2d: Polygon2D = $Polygon2D
 
-const TEX_RED = preload("res://assets/pics/red.png")
-const TEX_YELLOW = preload("res://assets/pics/yellow.png")
-const TEX_BLUE = preload("res://assets/pics/blue.png")
+const TEX_BLUE = preload("res://Frameworks(YourStuff)/Jude/MixColors/blue.png")
+const TEX_RED = preload("res://Frameworks(YourStuff)/Jude/MixColors/red.png")
+const TEX_YELLOW = preload("res://Frameworks(YourStuff)/Jude/MixColors/yellow.png")
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-func init(color: Color):
-	polygon_2d.color = color
-	apply_closest_texture(color)
+@export var colorstart : Color
+
+func _ready() -> void:
+	polygon_2d.color = colorstart
+	apply_closest_texture(colorstart)
 	
 func apply_closest_texture(input_color: Color):
 	# 1. Snap the messy input color to a "Rigid" constant

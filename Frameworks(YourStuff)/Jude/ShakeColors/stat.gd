@@ -6,7 +6,7 @@ const YELLOWSPRAYPOINT = preload("res://Frameworks(YourStuff)/Jude/ShakeColors/y
 var paint_meter = 0
 var done = false
 
-var total_needed = 10
+var total_needed = 1.0
 var can_paint = false
 
 signal graffiti_start(toggle)
@@ -16,7 +16,7 @@ signal graffiti_add(amt)
 
 func interacting():
 	can_paint = true
-	emit_signal("graffiti_add", paint_meter * 10)
+	emit_signal("graffiti_add", paint_meter)
 
 var music_started = false
 func _on_timer_timeout() -> void:
