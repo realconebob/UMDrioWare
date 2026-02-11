@@ -1,11 +1,10 @@
 extends Node2D
-@onready var GameRoot: Game = $".."
 
 @onready var Description: RichTextLabel = $Description
 @onready var timer_words: RichTextLabel = $TimerWords
 @onready var color_chosen_label: Label = $ColorChosen
 
-var timer = 1.0
+var timer = 10.0
 var won = false
 
 signal time_done
@@ -41,9 +40,9 @@ func start():
 	
 	started = true
 
-	timer = 15/GameRoot.get_intensity()
+	timer = 10
 	await time_done
-	GameRoot.end_game.emit(won) #defaults to false if button is not pressed
+	print(won)
 
 func set_random_color():
 	var rand3 = randi_range(0,2)

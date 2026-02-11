@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://exaws1jgbyi6"]
 
-[ext_resource type="Script" uid="uid://d28a1gihixqie" path="res://Misc/Scripts/MicroGameRoot.gd" id="1_kfb5p"]
+[ext_resource type="Script" uid="uid://d28a1gihixqie" path="res://Frameworks(YourStuff)/Game.gd" id="1_kfb5p"]
 [ext_resource type="Script" uid="uid://c1r4tn66ual54" path="res://Frameworks(YourStuff)/Jude/MixColors/MixColorgame.gd" id="2_utxgy"]
 [ext_resource type="Script" uid="uid://qankqaj8u8s0" path="res://Frameworks(YourStuff)/Jude/ShakeColors/ui.gd" id="4_htx8l"]
 [ext_resource type="Texture2D" uid="uid://b0qp2gfkx3prp" path="res://Frameworks(YourStuff)/Jude/ShakeColors/download_5.png" id="5_skyad"]
@@ -9,18 +9,19 @@
 [ext_resource type="AudioStream" uid="uid://d2xf13c8te4c2" path="res://Frameworks(YourStuff)/Jude/ShakeColors/interactiveshaking.wav" id="8_wcj5c"]
 [ext_resource type="Script" uid="uid://bhcwkndagc1va" path="res://Frameworks(YourStuff)/Jude/MixColors/paintstatus.gd" id="9_skyad"]
 [ext_resource type="Script" uid="uid://cy82qqhq84v8m" path="res://Frameworks(YourStuff)/Jude/ShakeColors/cursor.gd" id="10_0ivd8"]
-[ext_resource type="PackedScene" uid="uid://sgbw1mgo6pae" path="res://Frameworks(YourStuff)/Jude/MixColors/mixture.tscn" id="10_skyad"]
+[ext_resource type="Script" uid="uid://b07fiekqv4ptt" path="res://Frameworks(YourStuff)/Jude/ShakeColors/mixture.gd" id="10_4a5ag"]
+[ext_resource type="Texture2D" uid="uid://dkbax5mvtv70p" path="res://Frameworks(YourStuff)/Jude/MixColors/blue.png" id="11_c0a0c"]
 [ext_resource type="Texture2D" uid="uid://bahweix72qxss" path="res://Frameworks(YourStuff)/Jude/ShakeColors/box.png" id="11_hjchg"]
 [ext_resource type="Texture2D" uid="uid://bi4qsrpi6pim3" path="res://Frameworks(YourStuff)/Jude/ShakeColors/rmb.png" id="13_v2gw7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awanf"]
-size = Vector2(529, 216.76631)
+size = Vector2(529.3718, 216.76631)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0ca4"]
 size = Vector2(203.5, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epali"]
-size = Vector2(342.625, 143.25)
+size = Vector2(609.81116, 143.25)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c6657"]
 radius = 44.0
@@ -43,8 +44,9 @@ size = Vector2(594.984, 167.02466)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_epali"]
 
-[node name="GameRoot" type="Node2D" unique_id=2067474409]
+[node name="GameRoot" type="Node2D" unique_id=1956935812]
 script = ExtResource("1_kfb5p")
+metadata/_custom_type_script = "uid://d28a1gihixqie"
 
 [node name="Game" type="Node2D" parent="." unique_id=582359250]
 script = ExtResource("2_utxgy")
@@ -56,6 +58,7 @@ offset_right = 1150.0
 offset_bottom = 646.0
 
 [node name="Description" type="RichTextLabel" parent="Game" unique_id=47162102]
+visible = false
 offset_left = -282.0
 offset_top = -134.0
 offset_right = 871.0
@@ -73,6 +76,7 @@ scale = Vector2(0.22363043, 0.22363043)
 texture = ExtResource("13_v2gw7")
 
 [node name="TimerWords" type="RichTextLabel" parent="Game" unique_id=629589033]
+visible = false
 offset_left = 385.0
 offset_top = -164.0
 offset_right = 1538.0
@@ -109,15 +113,15 @@ offset_right = 333.0
 offset_bottom = 343.0
 
 [node name="BackPack" type="Sprite2D" parent="Game/UI/Smoke Grenade" unique_id=1565384838]
-position = Vector2(163, 272)
+position = Vector2(156.63692, 211.45935)
 scale = Vector2(0.49420103, 0.4942011)
 texture = ExtResource("5_skyad")
 
 [node name="mix" type="StaticBody2D" parent="Game/UI/Smoke Grenade" unique_id=1408560856]
-position = Vector2(-7, -4)
+position = Vector2(-13.363079, -64.54066)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mix" unique_id=1910814899]
-position = Vector2(148.5, -100.38318)
+position = Vector2(175.2146, -378.7618)
 shape = SubResource("RectangleShape2D_awanf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mix" unique_id=2013178147]
@@ -125,13 +129,13 @@ position = Vector2(167, 337.5)
 shape = SubResource("RectangleShape2D_s0ca4")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mix" unique_id=1359388624]
-position = Vector2(-9, 175)
-rotation = -1.5707964
+position = Vector2(-31.314943, 35.78851)
+rotation = -1.6883185
 shape = SubResource("RectangleShape2D_epali")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mix" unique_id=24990095]
-position = Vector2(343, 170)
-rotation = -1.5707964
+position = Vector2(345.95566, 35.78852)
+rotation = -1.4613435
 shape = SubResource("RectangleShape2D_epali")
 
 [node name="Mixer" type="CharacterBody2D" parent="Game/UI/Smoke Grenade/mix" unique_id=1869756323 groups=["interact"]]
@@ -150,6 +154,10 @@ texture = ExtResource("7_kinar")
 [node name="MixingSFX" type="AudioStreamPlayer" parent="Game/UI/Smoke Grenade/mix/Mixer" unique_id=719795379]
 stream = ExtResource("8_wcj5c")
 volume_db = -20.378
+
+[node name="Timer" type="Timer" parent="Game/UI/Smoke Grenade/mix/Mixer" unique_id=402474534]
+wait_time = 0.1
+autostart = true
 
 [node name="MixLayer" type="Area2D" parent="Game/UI/Smoke Grenade/mix" unique_id=1844240672]
 position = Vector2(163, 163)
@@ -188,7 +196,7 @@ show_percentage = false
 position = Vector2(1107, 91)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=953220328]
-position = Vector2(-24, -253.6662)
+position = Vector2(1.4087219, -327.6254)
 shape = SubResource("RectangleShape2D_hm6li")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=142327075]
@@ -196,28 +204,76 @@ position = Vector2(6, 303.8725)
 shape = SubResource("RectangleShape2D_ignvr")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=1398731251]
-position = Vector2(-326.1875, 51.5)
+position = Vector2(-365.42358, 13.856689)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_7lmeg")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=1314085647]
-position = Vector2(257.88733, 54.86432)
+position = Vector2(295.17285, 52.627583)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_0yrm1")
 
-[node name="Mixture" parent="Game/UI/Smoke Grenade/mixtures" unique_id=610547170 instance=ExtResource("10_skyad")]
+[node name="Mixture" type="RigidBody2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=610547170]
 position = Vector2(-95.51851, 74.99541)
+collision_layer = 2
+collision_mask = 3
+continuous_cd = 2
+script = ExtResource("10_4a5ag")
 colorstart = Color(1, 0, 0, 1)
 
-[node name="Mixture2" parent="Game/UI/Smoke Grenade/mixtures" unique_id=1084655402 instance=ExtResource("10_skyad")]
+[node name="Polygon2D" type="Polygon2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture" unique_id=310575915]
+visible = false
+polygon = PackedVector2Array(47, 32, 3, -41, -45, 11, -22, 77)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture" unique_id=1778944514]
+scale = Vector2(0.16074426, 0.16074426)
+texture = ExtResource("11_c0a0c")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture" unique_id=1846440324]
+polygon = PackedVector2Array(40, 17, 13, -35, 18, -60, 12, -70, -15, -69, -19, -58, -14, -36, -45, 11, -43, 37, -22, 57, 20, 57, 37, 46)
+
+[node name="Mixture2" type="RigidBody2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=1084655402]
 position = Vector2(22.285357, 127.18699)
 rotation = -0.92347854
+collision_layer = 2
+collision_mask = 3
+continuous_cd = 2
+script = ExtResource("10_4a5ag")
 colorstart = Color(0, 0, 1, 1)
 
-[node name="Mixture3" parent="Game/UI/Smoke Grenade/mixtures" unique_id=456567312 instance=ExtResource("10_skyad")]
+[node name="Polygon2D" type="Polygon2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture2" unique_id=103878257]
+visible = false
+polygon = PackedVector2Array(47, 32, 3, -41, -45, 11, -22, 77)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture2" unique_id=855924602]
+scale = Vector2(0.16074426, 0.16074426)
+texture = ExtResource("11_c0a0c")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture2" unique_id=1272970523]
+polygon = PackedVector2Array(40, 17, 13, -35, 18, -60, 12, -70, -15, -69, -19, -58, -14, -36, -45, 11, -43, 37, -22, 57, 20, 57, 37, 46)
+
+[node name="Mixture3" type="RigidBody2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=456567312]
 position = Vector2(93.86238, 31.750956)
 rotation = 0.84146106
+collision_layer = 2
+collision_mask = 3
+continuous_cd = 2
+script = ExtResource("10_4a5ag")
 colorstart = Color(1, 1, 0, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture3" unique_id=1537442585]
+visible = false
+polygon = PackedVector2Array(47, 32, 3, -41, -45, 11, -22, 77)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture3" unique_id=587047568]
+scale = Vector2(0.16074426, 0.16074426)
+texture = ExtResource("11_c0a0c")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Game/UI/Smoke Grenade/mixtures/Mixture3" unique_id=1538121130]
+polygon = PackedVector2Array(40, 17, 13, -35, 18, -60, 12, -70, -15, -69, -19, -58, -14, -36, -45, 11, -43, 37, -22, 57, 20, 57, 37, 46)
+
+[node name="PaintDropSpot" type="Marker2D" parent="Game/UI/Smoke Grenade/mixtures" unique_id=444915441]
+position = Vector2(-955.9341, -239.6453)
 
 [node name="Cursor" type="Area2D" parent="Game/UI" unique_id=132860936]
 collision_layer = 8
@@ -244,5 +300,16 @@ offset_bottom = 267.0
 scale = Vector2(1.2332478, 1.2332478)
 texture = ExtResource("11_hjchg")
 
-[connection signal="start_game" from="." to="Game" method="_on_game_root_start_game"]
+[node name="ColorChosen" type="Label" parent="Game" unique_id=2126465742]
+visible = false
+offset_left = 396.0
+offset_top = 169.99998
+offset_right = 519.0
+offset_bottom = 192.99998
+rotation = -0.21907493
+scale = Vector2(3.499887, 3.499887)
+text = "Make this color!"
+
+[connection signal="done_mixing" from="Game/UI/Smoke Grenade/mix/Mixer" to="Game" method="_on_mixer_done_mixing"]
+[connection signal="timeout" from="Game/UI/Smoke Grenade/mix/Mixer/Timer" to="Game/UI/Smoke Grenade/mix/Mixer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Game/UI/Smoke Grenade/mix/MixLayer" to="Game/UI/Smoke Grenade/mix/TextureRect" method="_on_mix_layer_body_entered"]

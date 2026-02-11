@@ -49,7 +49,7 @@ func add_trauma(amount : float, direction : Vector2): #CALL THIS FUNCTION TO STA
 	velocity += direction #for the spring camera motion
 	#noise.seed = randi()
 
-func rotate_trans(trans_time):
+func rotate_trans(_trans_time):
 	pass
 	#var cam_rotation_tween = get_tree().create_tween()
 	#cam_rotation_tween.tween_property(self, 'rotation', deg_to_rad(2), trans_time*.4).set_ease(Tween.EASE_OUT)
