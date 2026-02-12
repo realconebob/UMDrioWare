@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://c66dy58nn2n7a"]
 
-[ext_resource type="Script" uid="uid://d28a1gihixqie" path="res://DebugSampleGames/Scripts/MicroGameRoot.gd" id="1_ot2hq"]
 [ext_resource type="Script" uid="uid://40rx4l3n4tpp" path="res://Frameworks(YourStuff)/Jude/ShakeColors/SprayPaint.gd" id="2_ljf61"]
 [ext_resource type="Texture2D" uid="uid://b4nrfundlknrn" path="res://Frameworks(YourStuff)/Jude/ShakeColors/checkerboard_imageedit_17_4782211417.jpg" id="3_70f1w"]
 [ext_resource type="Script" uid="uid://bwl6hjy15q3lo" path="res://Frameworks(YourStuff)/Jude/ShakeColors/playerreal.gd" id="3_vj70r"]
@@ -188,114 +187,110 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_eo1av")
 
-[node name="GameRoot" type="Node2D" unique_id=1022882112]
-script = ExtResource("1_ot2hq")
-metadata/_custom_type_script = "uid://d28a1gihixqie"
-
-[node name="Game" type="Node2D" parent="." unique_id=582359250]
+[node name="Game" type="Node2D" unique_id=582359250]
 script = ExtResource("2_ljf61")
 
-[node name="Panel" type="Panel" parent="Game" unique_id=2005969969]
+[node name="Panel" type="Panel" parent="." unique_id=2005969969]
 offset_left = 5.0
 offset_top = 55.0
 offset_right = 1150.0
 offset_bottom = 646.0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Game" unique_id=357351056]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=357351056]
 offset_left = 24.0
 offset_top = 74.0
 offset_right = 1176.0
 offset_bottom = 722.0
 
-[node name="SubViewport" type="SubViewport" parent="Game/SubViewportContainer" unique_id=1118663380]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1118663380]
 handle_input_locally = false
 size = Vector2i(1099, 557)
 render_target_update_mode = 4
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1588110183]
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1588110183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020641327, -0.25854492, -0.18200684)
 material_override = SubResource("StandardMaterial3D_5ygj8")
 size = Vector3(3.4769363, 0.48291016, 4.1657715)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1306000328]
+[node name="CSGBox3D2" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1306000328]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11569047, 0.84375715, -2.763332)
 material_override = SubResource("StandardMaterial3D_yik30")
 size = Vector3(5.6471252, 2.7219238, 3.086792)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=391332752]
+[node name="CSGBox3D3" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=391332752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2828484, 0.8609619, -0.31037903)
 material_override = SubResource("StandardMaterial3D_h26no")
 size = Vector3(1.4796524, 2.7219238, 4.3562317)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=858221429]
+[node name="CSGBox3D4" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=858221429]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9425082, 0.8609619, -0.02204895)
 material_override = SubResource("StandardMaterial3D_m6qk3")
 size = Vector3(1.4796524, 2.7219238, 3.7795715)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport" unique_id=169728494]
+[node name="CSGBox3D5" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=169728494]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45377874, 0.8609619, 1.5297699)
 material_override = SubResource("StandardMaterial3D_eb5yf")
 size = Vector3(4.4571114, 2.7219238, 0.67593384)
 
-[node name="Player" type="CharacterBody3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1240587925 groups=["player"]]
+[node name="Player" type="CharacterBody3D" parent="SubViewportContainer/SubViewport" unique_id=1240587925 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2803173, 0, 0)
 collision_layer = 2
 script = ExtResource("3_vj70r")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=369986665]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Player" unique_id=369986665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47900403, 0)
 visible = false
 shape = SubResource("CapsuleShape3D_lwjk5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=2059082982]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Player" unique_id=2059082982]
 visible = false
 mesh = SubResource("CapsuleMesh_g1ecg")
 
-[node name="Camera3D" type="Camera3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=61123537]
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Player" unique_id=61123537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64104, 0)
 current = true
 fov = 80.0
 
-[node name="spray" type="Node3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=2016465519]
+[node name="spray" type="Node3D" parent="SubViewportContainer/SubViewport/Player/Camera3D" unique_id=2016465519]
 transform = Transform3D(-0.12514287, 1.5892198e-15, 1.8896051e-08, -7.3532087e-09, 0.115278944, -0.0486981, -1.7406636e-08, -0.0486981, -0.115278944, 0.44090378, -0.54883087, -0.26448578)
 
-[node name="Cylinder" type="MeshInstance3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D/spray" unique_id=1347628031]
+[node name="Cylinder" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Player/Camera3D/spray" unique_id=1347628031]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 layers = 2
 material_override = SubResource("StandardMaterial3D_y16p0")
 mesh = SubResource("ArrayMesh_66ovq")
 
-[node name="RayCast3D" type="RayCast3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=935598511]
+[node name="RayCast3D" type="RayCast3D" parent="SubViewportContainer/SubViewport/Player/Camera3D" unique_id=935598511]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066599846, 0)
 target_position = Vector3(0, 0, -5)
 collision_mask = 9
 collide_with_areas = true
 debug_shape_thickness = 1
 
-[node name="Hold" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=1265386443]
+[node name="Hold" type="Marker3D" parent="SubViewportContainer/SubViewport/Player/Camera3D" unique_id=1265386443]
 transform = Transform3D(-1, 0, -8.742278e-08, 2.6057059e-08, 0.95454776, -0.29805803, 8.3449216e-08, -0.29805803, -0.95454776, 0.45639068, -0.5116388, -0.4133594)
 
-[node name="Gone" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=725364921]
+[node name="Gone" type="Marker3D" parent="SubViewportContainer/SubViewport/Player/Camera3D" unique_id=725364921]
 transform = Transform3D(1, 0, 0, 0, 0.4452604, 0.8954011, 0, -0.8954011, 0.4452604, 0.45639068, -0.9436863, 0.1336425)
 
-[node name="Shoot" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player/Camera3D" unique_id=1254703258]
+[node name="Shoot" type="Marker3D" parent="SubViewportContainer/SubViewport/Player/Camera3D" unique_id=1254703258]
 transform = Transform3D(-0.91803163, 0, -0.39650717, 0.14981659, 0.9258706, -0.3468698, 0.36711434, -0.3778408, -0.8499785, 0.16003448, -0.6915858, -0.3634504)
 
-[node name="Hand" type="Marker3D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=2117977322]
+[node name="Hand" type="Marker3D" parent="SubViewportContainer/SubViewport/Player" unique_id=2117977322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0255799, 0.5814272, -0.021744639)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Game/SubViewportContainer/SubViewport/Player/Hand" unique_id=877692671]
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Player/Hand" unique_id=877692671]
 size = Vector3(0.2833252, 0.63391113, 0.22558594)
 
-[node name="Death" type="AudioStreamPlayer" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=2037566475]
+[node name="Death" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport/Player" unique_id=2037566475]
 stream = ExtResource("5_70f1w")
 volume_db = -8.0
 
-[node name="ShakeHolder" type="Node2D" parent="Game/SubViewportContainer/SubViewport/Player" unique_id=722481090]
+[node name="ShakeHolder" type="Node2D" parent="SubViewportContainer/SubViewport/Player" unique_id=722481090]
 position = Vector2(554, -14)
 script = ExtResource("6_prm7q")
 
-[node name="ProgressBar" type="ProgressBar" parent="Game/SubViewportContainer/SubViewport/Player/ShakeHolder" unique_id=274503480]
+[node name="ProgressBar" type="ProgressBar" parent="SubViewportContainer/SubViewport/Player/ShakeHolder" unique_id=274503480]
 offset_left = -133.0
 offset_top = 31.0
 offset_right = 121.0
@@ -303,45 +298,45 @@ offset_bottom = 58.0
 pivot_offset = Vector2(126, 15)
 show_percentage = false
 
-[node name="SprayWall" type="StaticBody3D" parent="Game/SubViewportContainer/SubViewport" unique_id=34328576 groups=["SprayWall"]]
+[node name="SprayWall" type="StaticBody3D" parent="SubViewportContainer/SubViewport" unique_id=34328576 groups=["SprayWall"]]
 script = ExtResource("8_0jcem")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=1878461872 groups=["interact"]]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/SprayWall" unique_id=1878461872 groups=["interact"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07085419, 0.9606323, -1.6504204)
 shape = SubResource("BoxShape3D_0jcem")
 
-[node name="Timer" type="Timer" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=535407756]
+[node name="Timer" type="Timer" parent="SubViewportContainer/SubViewport/SprayWall" unique_id=535407756]
 wait_time = 0.1
 autostart = true
 
-[node name="Area3D" type="Area3D" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=283729313]
+[node name="Area3D" type="Area3D" parent="SubViewportContainer/SubViewport/SprayWall" unique_id=283729313]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/SubViewportContainer/SubViewport/SprayWall/Area3D" unique_id=400221431]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/SprayWall/Area3D" unique_id=400221431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7417183, -1.0067637)
 shape = SubResource("SphereShape3D_vcwi6")
 debug_color = Color(0, 0.64705884, 0.24313726, 0.7294118)
 
-[node name="sing" type="AudioStreamPlayer" parent="Game/SubViewportContainer/SubViewport/SprayWall" unique_id=1078598497]
+[node name="sing" type="AudioStreamPlayer" parent="SubViewportContainer/SubViewport/SprayWall" unique_id=1078598497]
 stream = ExtResource("9_5ygj8")
 volume_db = -12.484
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1869313255]
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1869313255]
 transform = Transform3D(1, 0, 0, 0, 0.5286606, 0.8488333, 0, -0.8488333, 0.5286606, 0, 2.2073548, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Game/SubViewportContainer/SubViewport" unique_id=677707403]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=677707403]
 environment = SubResource("Environment_h26no")
 
-[node name="paintings" type="Node3D" parent="Game/SubViewportContainer/SubViewport" unique_id=1122347425]
+[node name="paintings" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1122347425]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3513836, 0, -9.791424)
 
-[node name="Cube" type="MeshInstance3D" parent="Game/SubViewportContainer/SubViewport/paintings" unique_id=904135161]
+[node name="Cube" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/paintings" unique_id=904135161]
 transform = Transform3D(-2.7145099e-08, 0, -0.62100744, 0, 0.7642592, 0, 0.62100744, 0, -2.7145099e-08, 1.6014826, 1.0216051, 9.1818)
 material_override = SubResource("StandardMaterial3D_sg72q")
 mesh = SubResource("ArrayMesh_icnx6")
 
-[node name="Description" type="RichTextLabel" parent="Game" unique_id=47162102]
+[node name="Description" type="RichTextLabel" parent="." unique_id=47162102]
 offset_left = -282.0
 offset_top = -134.0
 offset_right = 871.0
@@ -352,13 +347,13 @@ text = "to vandalise!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Rmb" type="Sprite2D" parent="Game/Description" unique_id=1360412771]
+[node name="Rmb" type="Sprite2D" parent="Description" unique_id=1360412771]
 position = Vector2(397, 331.00003)
 rotation = -0.3771902
 scale = Vector2(0.22363043, 0.22363043)
 texture = ExtResource("13_prm7q")
 
-[node name="TimerWords" type="RichTextLabel" parent="Game" unique_id=629589033]
+[node name="TimerWords" type="RichTextLabel" parent="." unique_id=629589033]
 offset_left = 385.0
 offset_top = -199.0
 offset_right = 1538.0
@@ -370,5 +365,4 @@ text = "Time Left:
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="start_game" from="." to="Game" method="_on_game_root_start_game"]
-[connection signal="timeout" from="Game/SubViewportContainer/SubViewport/SprayWall/Timer" to="Game/SubViewportContainer/SubViewport/SprayWall" method="_on_timer_timeout"]
+[connection signal="timeout" from="SubViewportContainer/SubViewport/SprayWall/Timer" to="SubViewportContainer/SubViewport/SprayWall" method="_on_timer_timeout"]
