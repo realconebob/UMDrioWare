@@ -1,7 +1,8 @@
 class_name TennisBall
 extends RigidBody2D
 
-@export var base_speed: int = 400
+@export var base_xspeed: int = 800
+@export var base_yspeed: int = 1600
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

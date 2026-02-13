@@ -16,7 +16,6 @@ script = ExtResource("1_yxrwa")
 metadata/_edit_lock_ = true
 
 [node name="Body" type="StaticBody2D" parent="." unique_id=939007600]
-metadata/_edit_lock_ = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="Body" unique_id=1396103958]
 position = Vector2(0, -1.5258789e-05)
@@ -25,15 +24,16 @@ shape = SubResource("RectangleShape2D_qlpjk")
 [node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=697845464]
 
 [node name="Left Arm" type="Node2D" parent="." unique_id=1300417985]
-metadata/_edit_lock_ = true
 
 [node name="Left Rear Arm" type="RigidBody2D" parent="Left Arm" unique_id=992388163]
 collision_layer = 0
 collision_mask = 0
 
 [node name="Left Arm Connector" type="PinJoint2D" parent="Left Arm/Left Rear Arm" unique_id=1544064188]
+position = Vector2(7, -97)
 node_a = NodePath("../../../Body")
 node_b = NodePath("..")
+softness = 16.0
 
 [node name="Hitbox" type="CollisionShape2D" parent="Left Arm/Left Rear Arm" unique_id=1191272705]
 position = Vector2(85, -54.000015)
@@ -47,6 +47,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="Intra-Left Arm Connector" type="PinJoint2D" parent="Left Arm/Left Rear Arm/Left Forearm" unique_id=1683090964]
+position = Vector2(163, -11)
 node_a = NodePath("../..")
 node_b = NodePath("..")
 
@@ -60,6 +61,7 @@ shape = SubResource("RectangleShape2D_0tfjl")
 [node name="Left Fist" type="CharacterBody2D" parent="Left Arm/Left Rear Arm/Left Forearm" unique_id=1066214908]
 
 [node name="Left Fist Connector" type="PinJoint2D" parent="Left Arm/Left Rear Arm/Left Forearm/Left Fist" unique_id=1753527265]
+position = Vector2(233, -179)
 node_a = NodePath("../..")
 node_b = NodePath("..")
 
@@ -71,13 +73,13 @@ shape = SubResource("RectangleShape2D_oahid")
 [node name="Glove" type="Sprite2D" parent="Left Arm/Left Rear Arm/Left Forearm/Left Fist" unique_id=1325635191]
 
 [node name="Right Arm" type="Node2D" parent="." unique_id=494331189]
-metadata/_edit_lock_ = true
 
 [node name="Right Rear Arm" type="RigidBody2D" parent="Right Arm" unique_id=1759357202]
 collision_layer = 0
 collision_mask = 0
 
 [node name="Right Arm Connector" type="PinJoint2D" parent="Right Arm/Right Rear Arm" unique_id=1414252269]
+position = Vector2(-11, -59)
 node_a = NodePath("../../../Body")
 node_b = NodePath("..")
 
@@ -93,6 +95,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="Intra-Right Arm Connector" type="PinJoint2D" parent="Right Arm/Right Rear Arm/Right Forearm" unique_id=1345529622]
+position = Vector2(97, 83)
 node_a = NodePath("../..")
 node_b = NodePath("..")
 
@@ -106,7 +109,7 @@ shape = SubResource("RectangleShape2D_0tfjl")
 [node name="Right Fist" type="CharacterBody2D" parent="Right Arm/Right Rear Arm/Right Forearm" unique_id=217285638]
 
 [node name="Right Fist Connector" type="PinJoint2D" parent="Right Arm/Right Rear Arm/Right Forearm/Right Fist" unique_id=1261763202]
-position = Vector2(414, -80)
+position = Vector2(168, -89)
 node_a = NodePath("../..")
 node_b = NodePath("..")
 

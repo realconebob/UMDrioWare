@@ -3,10 +3,11 @@ extends Game
 
 @export var tb_scene: PackedScene
 @export var tb_angle: float = 45
+var screen_size: Vector2 = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var screen_size: Vector2 = get_viewport_rect().size
+func _start_game():
+	screen_size = get_viewport_rect().size
 	$Tyson.position = Vector2(screen_size.x / 3, screen_size.y / 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,10 +19,10 @@ func _on_ball_timer_timeout() -> void:
 	
 	# TODO: check to see that this vector decomp is correct
 	var theta: float = deg_to_rad(randf_range(tb_angle - (tb_angle/2), tb_angle + (tb_angle/2)))
-	var xspeed: float = tennis_ball.base_speed * get_intensity() * cos(theta)
-	var yspeed: float = tennis_ball.base_speed * get_intensity() * sin(theta)
+	var xspeed: float = -1 * tennis_ball.base_xspeed * get_intensity() * cos(theta)
+	var yspeed: float = -1 * tennis_ball.base_yspeed * get_intensity() * sin(theta)
 	
-	tennis_ball.position = Vector2(0, 0) # TODO: Replace
+	tennis_ball.position = Vector2(screen_size.x, screen_size.y) # TODO: Replace
 	tennis_ball.rotation = randf_range(0, 2 * PI)
 	tennis_ball.linear_velocity = Vector2(xspeed, yspeed)
 	tennis_ball.angular_velocity = randf_range(0, 2 * PI * get_intensity())

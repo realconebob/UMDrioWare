@@ -8,6 +8,7 @@
 contact_monitor = true
 max_contacts_reported = 10
 script = ExtResource("1_wj4vc")
+base_yspeed = 1400
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1439462338]
