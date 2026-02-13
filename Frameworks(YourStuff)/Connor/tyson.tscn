@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://cxymrx6g58j1"]
+
+[ext_resource type="Script" uid="uid://0aumljktykh2" path="res://Frameworks(YourStuff)/Connor/tyson.gd" id="1_yxrwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlpjk"]
+size = Vector2(125, 569)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tfjl"]
+size = Vector2(196.29633, 17.60234)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oahid"]
+size = Vector2(35, 78)
+
+[node name="Tyson" type="Node2D" unique_id=460236819]
+script = ExtResource("1_yxrwa")
+metadata/_edit_lock_ = true
+
+[node name="Body" type="StaticBody2D" parent="." unique_id=939007600]
+metadata/_edit_lock_ = true
+
+[node name="Hitbox" type="CollisionShape2D" parent="Body" unique_id=1396103958]
+position = Vector2(0, -1.5258789e-05)
+shape = SubResource("RectangleShape2D_qlpjk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=697845464]
+
+[node name="Left Arm" type="Node2D" parent="." unique_id=1300417985]
+metadata/_edit_lock_ = true
+
+[node name="Left Rear Arm" type="RigidBody2D" parent="Left Arm" unique_id=992388163]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Left Arm Connector" type="PinJoint2D" parent="Left Arm/Left Rear Arm" unique_id=1544064188]
+node_a = NodePath("../../../Body")
+node_b = NodePath("..")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Left Arm/Left Rear Arm" unique_id=1191272705]
+position = Vector2(85, -54.000015)
+rotation = 0.50265485
+shape = SubResource("RectangleShape2D_0tfjl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Left Arm/Left Rear Arm" unique_id=1286125258]
+
+[node name="Left Forearm" type="RigidBody2D" parent="Left Arm/Left Rear Arm" unique_id=1560133300]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Intra-Left Arm Connector" type="PinJoint2D" parent="Left Arm/Left Rear Arm/Left Forearm" unique_id=1683090964]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Left Arm/Left Rear Arm/Left Forearm" unique_id=449550277]
+position = Vector2(196.00003, -92.000015)
+rotation = -1.1728612
+shape = SubResource("RectangleShape2D_0tfjl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Left Arm/Left Rear Arm/Left Forearm" unique_id=1259289035]
+
+[node name="Left Fist" type="CharacterBody2D" parent="Left Arm/Left Rear Arm/Left Forearm" unique_id=1066214908]
+
+[node name="Left Fist Connector" type="PinJoint2D" parent="Left Arm/Left Rear Arm/Left Forearm/Left Fist" unique_id=1753527265]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Left Arm/Left Rear Arm/Left Forearm/Left Fist" unique_id=1246207519]
+position = Vector2(233, -179)
+rotation = -0.25132743
+shape = SubResource("RectangleShape2D_oahid")
+
+[node name="Glove" type="Sprite2D" parent="Left Arm/Left Rear Arm/Left Forearm/Left Fist" unique_id=1325635191]
+
+[node name="Right Arm" type="Node2D" parent="." unique_id=494331189]
+metadata/_edit_lock_ = true
+
+[node name="Right Rear Arm" type="RigidBody2D" parent="Right Arm" unique_id=1759357202]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Right Arm Connector" type="PinJoint2D" parent="Right Arm/Right Rear Arm" unique_id=1414252269]
+node_a = NodePath("../../../Body")
+node_b = NodePath("..")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Right Arm/Right Rear Arm" unique_id=371571064]
+position = Vector2(42.99997, 11.999954)
+rotation = 0.9215338
+shape = SubResource("RectangleShape2D_0tfjl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Right Arm/Right Rear Arm" unique_id=1892939538]
+
+[node name="Right Forearm" type="RigidBody2D" parent="Right Arm/Right Rear Arm" unique_id=976928141]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Intra-Right Arm Connector" type="PinJoint2D" parent="Right Arm/Right Rear Arm/Right Forearm" unique_id=1345529622]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Right Arm/Right Rear Arm/Right Forearm" unique_id=1036123562]
+position = Vector2(131, -4.5776367e-05)
+rotation = -1.1728612
+shape = SubResource("RectangleShape2D_0tfjl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Right Arm/Right Rear Arm/Right Forearm" unique_id=1399474136]
+
+[node name="Right Fist" type="CharacterBody2D" parent="Right Arm/Right Rear Arm/Right Forearm" unique_id=217285638]
+
+[node name="Right Fist Connector" type="PinJoint2D" parent="Right Arm/Right Rear Arm/Right Forearm/Right Fist" unique_id=1261763202]
+position = Vector2(414, -80)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Right Arm/Right Rear Arm/Right Forearm/Right Fist" unique_id=1001135339]
+position = Vector2(168, -89.000015)
+rotation = -0.25132743
+shape = SubResource("RectangleShape2D_oahid")
+
+[node name="Glove" type="Sprite2D" parent="Right Arm/Right Rear Arm/Right Forearm/Right Fist" unique_id=1506042556]

@@ -1,9 +1,30 @@
-class_name conar extends Game
+class_name ConnorWalstrom 
+extends Game
+
+@export var tb_scene: PackedScene
+@export var tb_angle: float = 45
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var screen_size: Vector2 = get_viewport_rect().size
+	$Tyson.position = Vector2(screen_size.x / 3, screen_size.y / 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _on_ball_timer_timeout() -> void:
+	var tennis_ball: TennisBall = tb_scene.instantiate()
+	
+	# TODO: check to see that this vector decomp is correct
+	var theta: float = deg_to_rad(randf_range(tb_angle - (tb_angle/2), tb_angle + (tb_angle/2)))
+	var xspeed: float = tennis_ball.base_speed * get_intensity() * cos(theta)
+	var yspeed: float = tennis_ball.base_speed * get_intensity() * sin(theta)
+	
+	tennis_ball.position = Vector2(0, 0) # TODO: Replace
+	tennis_ball.rotation = randf_range(0, 2 * PI)
+	tennis_ball.linear_velocity = Vector2(xspeed, yspeed)
+	tennis_ball.angular_velocity = randf_range(0, 2 * PI * get_intensity())
+	
+	add_child(tennis_ball)
+	return
