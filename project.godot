@@ -22,7 +22,6 @@ Director="*uid://cwiuo8ouea0ln"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [filesystem]
