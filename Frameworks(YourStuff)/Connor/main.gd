@@ -17,7 +17,21 @@ func _start_game():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if !winstate:
+		$"game status".color = Color(1, 0, 0)
+		$"Status text".text = "LOSING!"
 	pass
 
 func _on_game_timer_timeout() -> void:
 	emit_signal("end_game", winstate)
+
+func _on_tennis_ball_launcher_launched_ball(ball: TennisBall) -> void:
+	# lambdas are fucking awesome
+	ball.body_entered.connect(
+		func(body: Node) -> void:
+			if body == $Tyson/Body:
+				winstate = false
+			return
+	)
+	
+	return

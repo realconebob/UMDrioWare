@@ -1,6 +1,8 @@
 class_name TennisBallLauncher
 extends Node2D
 
+signal launched_ball(ball: TennisBall)
+
 @export var tb_launch: Vector2
 @export var tb_scene: PackedScene
 @export var tb_angle: float = 35
@@ -10,8 +12,8 @@ var is_setup: bool = false
 
 var timer: Timer
 
-func _setup(intensity: float) -> void:
-	self.intensity = intensity
+func _setup(inten: float) -> void:
+	self.intensity = inten
 	self.tb_launch = $"TB Launch Point".position
 	self.is_setup = true
 	
@@ -44,4 +46,5 @@ func _on_launch_timer_timeout() -> void:
 	tennis_ball.angular_velocity = randf_range(0, 2 * PI * intensity)
 	
 	add_child(tennis_ball)
+	launched_ball.emit(tennis_ball)
 	return

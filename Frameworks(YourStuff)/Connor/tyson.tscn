@@ -178,6 +178,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_atjw6")
 
 [node name="Legs" type="Sprite2D" parent="." unique_id=1538125860]
+z_index = 1
 position = Vector2(-27, 442)
 scale = Vector2(0.485, 1)
 skew = -0.02094395

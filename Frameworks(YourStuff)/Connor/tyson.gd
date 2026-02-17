@@ -1,7 +1,6 @@
 class_name Tyson
 extends Node2D
 
-signal hit
 @onready var hitbox: CollisionShape2D = $Body/Hitbox
 
 # Called when the node enters the scene tree for the first time.
