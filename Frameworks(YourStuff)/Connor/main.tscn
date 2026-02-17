@@ -16,8 +16,15 @@ script = ExtResource("1_qlpjk")
 metadata/_custom_type_script = "uid://d28a1gihixqie"
 metadata/_edit_lock_ = true
 
+[node name="Sound Emitter" type="AudioStreamPlayer2D" parent="." unique_id=297487453]
+position = Vector2(583, 0)
+max_polyphony = 10
+metadata/_edit_lock_ = true
+
 [node name="Tyson" parent="." unique_id=460236819 instance=ExtResource("2_oahid")]
+z_index = 1
 position = Vector2(83, 275)
+gravity_scale = 2.0
 
 [node name="Tennis Ball Launcher" parent="." unique_id=1646039142 instance=ExtResource("3_0tfjl")]
 position = Vector2(1015, 475)

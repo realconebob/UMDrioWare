@@ -8,9 +8,8 @@ signal launched_ball(ball: TennisBall)
 @export var tb_angle: float = 35
 
 @export var intensity: float = 1.0
-var is_setup: bool = false
-
-var timer: Timer
+@onready var timer: Timer
+@onready var is_setup: bool = false
 
 func _setup(inten: float) -> void:
 	self.intensity = inten
@@ -22,14 +21,6 @@ func _setup(inten: float) -> void:
 	timer.start()
 	
 	return
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _on_launch_timer_timeout() -> void:
 	assert(self.is_setup, "<TennisBallLauncher::_on_launch_timer_timeout> Error: Object has not been set up with TennisBallLauncher::_setup")
@@ -46,4 +37,9 @@ func _on_launch_timer_timeout() -> void:
 	
 	add_child(tennis_ball)
 	launched_ball.emit(tennis_ball)
+	
+	var launch: AudioStreamPlayer2D = $"TB Launch Sound"
+	launch.pitch_scale = randf_range(0.8125, 1.0625)
+	launch.play()
+	
 	return
