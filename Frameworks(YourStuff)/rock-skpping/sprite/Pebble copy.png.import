@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8v3e03adhk5j"
-path="res://.godot/imported/Pebble copy.png-f083427259de97aa83fe60feb278a14e.ctex"
+path="res://.godot/imported/Pebble copy.png-9aa28d107ae84bf6fe7455c596cbef35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/Pebble copy.png"
-dest_files=["res://.godot/imported/Pebble copy.png-f083427259de97aa83fe60feb278a14e.ctex"]
+source_file="res://Frameworks(YourStuff)/rock-skpping/sprite/Pebble copy.png"
+dest_files=["res://.godot/imported/Pebble copy.png-9aa28d107ae84bf6fe7455c596cbef35.ctex"]
 
 [params]
 

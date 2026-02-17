@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cl1k8ckbj2sot"
-path="res://.godot/imported/tune2.wav-b5abdcd6771d66dcf94509b8328f1410.sample"
+path="res://.godot/imported/tune2.wav-f544045241e62ec6f0285a91607c630f.sample"
 
 [deps]
 
-source_file="res://sprite/tune2.wav"
-dest_files=["res://.godot/imported/tune2.wav-b5abdcd6771d66dcf94509b8328f1410.sample"]
+source_file="res://Frameworks(YourStuff)/rock-skpping/sprite/tune2.wav"
+dest_files=["res://.godot/imported/tune2.wav-f544045241e62ec6f0285a91607c630f.sample"]
 
 [params]
 

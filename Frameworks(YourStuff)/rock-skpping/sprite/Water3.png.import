@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drrqho5xjpjs"
-path="res://.godot/imported/Water3.png-29b0167c7c293dfb430750523cec05c7.ctex"
+path="res://.godot/imported/Water3.png-1ef9b1964caf8610fdf4feb5d85e3e1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/Water3.png"
-dest_files=["res://.godot/imported/Water3.png-29b0167c7c293dfb430750523cec05c7.ctex"]
+source_file="res://Frameworks(YourStuff)/rock-skpping/sprite/Water3.png"
+dest_files=["res://.godot/imported/Water3.png-1ef9b1964caf8610fdf4feb5d85e3e1e.ctex"]
 
 [params]
 

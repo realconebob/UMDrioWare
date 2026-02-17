@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx2snjohykhf5"
-path="res://.godot/imported/Mountains.png-9fcb80f31fad4c42bf3332f3ba3e22f7.ctex"
+path="res://.godot/imported/Mountains.png-b57b80983387e3517fb625dbee5b0720.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/Mountains.png"
-dest_files=["res://.godot/imported/Mountains.png-9fcb80f31fad4c42bf3332f3ba3e22f7.ctex"]
+source_file="res://Frameworks(YourStuff)/rock-skpping/sprite/Mountains.png"
+dest_files=["res://.godot/imported/Mountains.png-b57b80983387e3517fb625dbee5b0720.ctex"]
 
 [params]
 

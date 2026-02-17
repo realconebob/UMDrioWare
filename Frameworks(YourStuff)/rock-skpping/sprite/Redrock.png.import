@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://708ckotn37l"
-path="res://.godot/imported/Redrock.png-5c07fe248a72cee90bfe4600dcad7631.ctex"
+path="res://.godot/imported/Redrock.png-78459062525351e4fd982ea5b002da7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/Redrock.png"
-dest_files=["res://.godot/imported/Redrock.png-5c07fe248a72cee90bfe4600dcad7631.ctex"]
+source_file="res://Frameworks(YourStuff)/rock-skpping/sprite/Redrock.png"
+dest_files=["res://.godot/imported/Redrock.png-78459062525351e4fd982ea5b002da7b.ctex"]
 
 [params]
 

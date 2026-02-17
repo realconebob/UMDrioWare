@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cyurkcea6o5qe"
-path="res://.godot/imported/explosion.wav-07aca2a99b47bdd55429e5b22eff2d0d.sample"
+path="res://.godot/imported/explosion.wav-57022d46a4983cf4daeb4e63b77970e3.sample"
 
 [deps]
 
-source_file="res://sprite/explosion.wav"
-dest_files=["res://.godot/imported/explosion.wav-07aca2a99b47bdd55429e5b22eff2d0d.sample"]
+source_file="res://Frameworks(YourStuff)/rock-skpping/sprite/explosion.wav"
+dest_files=["res://.godot/imported/explosion.wav-57022d46a4983cf4daeb4e63b77970e3.sample"]
 
 [params]
 

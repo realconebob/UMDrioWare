@@ -11,11 +11,11 @@ var timer_handler : bool = false
 @onready var wind: AudioStreamPlayer = $"../Wind"
 @onready var music: AudioStreamPlayer = $"../Music"
 #Idk if I like this music. But it's music lol
-@onready var ww_game: Node2D = $".."
+@onready var ww_game: Game = $".." as Game
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Engine.time_scale = 2
+	#Engine.time_scale = 2
 	timer.wait_time = 0.15
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,11 +32,15 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("skip") && inside_place == false:
 			timer.wait_time +=0.5
 	if skip_counter == 3:
+		Engine.time_scale = 1.0
+		ww_game.end_game.emit(true)
 		print("you won!")
 		sprite_2d.visible = false
 		shadow.visible = false
 		skip_counter = 0
 	if timer.wait_time >= 3:
+		Engine.time_scale = 1.0
+		ww_game.end_game.emit(false)
 		print("you lost!! Bro you suck at throwing rocks fr")
 		sprite_2d.visible = false
 		shadow.visible = false
@@ -52,6 +56,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 func _on_bad_water_body_entered(body: Node2D) -> void:
 	if skipped == false:
+		Engine.time_scale = 1.0
+		ww_game.end_game.emit(false)
 		print("you lost!! Bro you suck at throwing rocks fr")
 		sprite_2d.visible = false
 		shadow.visible = false

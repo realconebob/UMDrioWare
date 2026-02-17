@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://c4vbajirj1ay5"]
 
-[ext_resource type="Script" uid="uid://gh0tw5gplkyp" path="res://ROCK.gd" id="1_io2xr"]
-[ext_resource type="Texture2D" uid="uid://cnpkyomhopatt" path="res://sprite/Mountains3.png" id="1_kllbg"]
-[ext_resource type="Texture2D" uid="uid://cts6q8n8eko6s" path="res://sprite/Water1.png" id="2_7w4eo"]
-[ext_resource type="Texture2D" uid="uid://bo2yk5ve4qyra" path="res://sprite/Water2.png" id="3_2op23"]
-[ext_resource type="Texture2D" uid="uid://708ckotn37l" path="res://sprite/Redrock.png" id="3_o2w0t"]
-[ext_resource type="Texture2D" uid="uid://drrqho5xjpjs" path="res://sprite/Water3.png" id="4_kllbg"]
-[ext_resource type="Texture2D" uid="uid://dyc7o1q6jcnhq" path="res://sprite/RockShadow.png" id="4_o2w0t"]
-[ext_resource type="Texture2D" uid="uid://cx0rj3k8o4s7q" path="res://sprite/Water4.png" id="5_agafr"]
-[ext_resource type="AudioStream" uid="uid://cyurkcea6o5qe" path="res://sprite/explosion.wav" id="8_agafr"]
-[ext_resource type="AudioStream" uid="uid://bfisarvhlmvtp" path="res://sprite/WindyNO_STATIC.wav" id="10_f40dj"]
-[ext_resource type="AudioStream" uid="uid://cl1k8ckbj2sot" path="res://sprite/tune2.wav" id="11_6wk24"]
+[ext_resource type="Script" uid="uid://gh0tw5gplkyp" path="res://Frameworks(YourStuff)/rock-skpping/ROCK.gd" id="1_io2xr"]
+[ext_resource type="Texture2D" uid="uid://cnpkyomhopatt" path="res://Frameworks(YourStuff)/rock-skpping/sprite/Mountains3.png" id="1_kllbg"]
+[ext_resource type="Script" uid="uid://bmrej2hhvtmco" path="res://Frameworks(YourStuff)/rock-skpping/main.gd" id="1_s5k8i"]
+[ext_resource type="Texture2D" uid="uid://cts6q8n8eko6s" path="res://Frameworks(YourStuff)/rock-skpping/sprite/Water1.png" id="2_7w4eo"]
+[ext_resource type="Texture2D" uid="uid://bo2yk5ve4qyra" path="res://Frameworks(YourStuff)/rock-skpping/sprite/Water2.png" id="3_2op23"]
+[ext_resource type="Texture2D" uid="uid://708ckotn37l" path="res://Frameworks(YourStuff)/rock-skpping/sprite/Redrock.png" id="3_o2w0t"]
+[ext_resource type="Texture2D" uid="uid://drrqho5xjpjs" path="res://Frameworks(YourStuff)/rock-skpping/sprite/Water3.png" id="4_kllbg"]
+[ext_resource type="Texture2D" uid="uid://dyc7o1q6jcnhq" path="res://Frameworks(YourStuff)/rock-skpping/sprite/RockShadow.png" id="4_o2w0t"]
+[ext_resource type="Texture2D" uid="uid://cx0rj3k8o4s7q" path="res://Frameworks(YourStuff)/rock-skpping/sprite/Water4.png" id="5_agafr"]
+[ext_resource type="AudioStream" uid="uid://cyurkcea6o5qe" path="res://Frameworks(YourStuff)/rock-skpping/sprite/explosion.wav" id="8_agafr"]
+[ext_resource type="AudioStream" uid="uid://bfisarvhlmvtp" path="res://Frameworks(YourStuff)/rock-skpping/sprite/WindyNO_STATIC.wav" id="10_f40dj"]
+[ext_resource type="AudioStream" uid="uid://cl1k8ckbj2sot" path="res://Frameworks(YourStuff)/rock-skpping/sprite/tune2.wav" id="11_6wk24"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_77prf"]
 bounce = 0.85
@@ -35,12 +36,13 @@ streams_count = 1
 stream_0/stream = ExtResource("10_f40dj")
 
 [node name="WWGame" type="Node2D" unique_id=618096148]
+script = ExtResource("1_s5k8i")
 
 [node name="Trees+Sky+Mountains" type="Parallax2D" parent="." unique_id=528855935]
 scroll_offset = Vector2(-227, 192)
 repeat_size = Vector2(1074, 0)
 autoscroll = Vector2(-20, 0)
-repeat_times = 2
+repeat_times = 10
 
 [node name="Background" type="Sprite2D" parent="Trees+Sky+Mountains" unique_id=1848164950]
 position = Vector2(765, 9.000008)
@@ -51,7 +53,7 @@ texture = ExtResource("1_kllbg")
 scroll_offset = Vector2(-394, 522)
 repeat_size = Vector2(740, 0)
 autoscroll = Vector2(-30, 0)
-repeat_times = 2
+repeat_times = 10
 
 [node name="Background" type="Sprite2D" parent="Water1" unique_id=1407178196]
 position = Vector2(781, -107.75)
@@ -62,7 +64,7 @@ texture = ExtResource("2_7w4eo")
 scroll_offset = Vector2(-394, 491.25)
 repeat_size = Vector2(750, 0)
 autoscroll = Vector2(-60, 0)
-repeat_times = 2
+repeat_times = 10
 
 [node name="Background" type="Sprite2D" parent="Water2" unique_id=496804603]
 position = Vector2(781, -47)
@@ -73,7 +75,7 @@ texture = ExtResource("3_2op23")
 scroll_offset = Vector2(-394, 491.25)
 repeat_size = Vector2(700, 0)
 autoscroll = Vector2(-100, 0)
-repeat_times = 2
+repeat_times = 10
 
 [node name="Background" type="Sprite2D" parent="Water3" unique_id=1286857468]
 position = Vector2(781, -6)
@@ -84,7 +86,7 @@ texture = ExtResource("4_kllbg")
 scroll_offset = Vector2(-394, 491.25)
 repeat_size = Vector2(719, 0)
 autoscroll = Vector2(-160, 0)
-repeat_times = 2
+repeat_times = 10
 
 [node name="Background" type="Sprite2D" parent="Water4" unique_id=1597640361]
 position = Vector2(784, 97.75)
