@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ce3nbheld5ooj" path="res://Frameworks(YourStuff)/boolet/assets/head.png" id="2_xh85e"]
 [ext_resource type="Texture2D" uid="uid://dkvbevofhnln4" path="res://Frameworks(YourStuff)/boolet/assets/legs.png" id="3_7y4ks"]
 [ext_resource type="Texture2D" uid="uid://tienrcamiste" path="res://Frameworks(YourStuff)/boolet/assets/body.png" id="4_04aby"]
+[ext_resource type="Script" uid="uid://ct8k8umdc7fu4" path="res://Frameworks(YourStuff)/boolet/MovingSprite2D.gd" id="4_p03fn"]
 
 [node name="Main" type="Node2D" unique_id=1668058152]
 script = ExtResource("1_04aby")
@@ -17,18 +18,26 @@ offset_bottom = 648.0
 [node name="The Guy" type="Node2D" parent="." unique_id=1993743905]
 script = ExtResource("2_p03fn")
 
-[node name="Shotty" type="Sprite2D" parent="The Guy" unique_id=392396419]
+[node name="Shotty" type="Sprite2D" parent="The Guy" unique_id=825409008]
 position = Vector2(335, 296)
 texture = ExtResource("1_6rb21")
+script = ExtResource("4_p03fn")
+metadata/_custom_type_script = "uid://ct8k8umdc7fu4"
 
-[node name="Head" type="Sprite2D" parent="The Guy" unique_id=1195376254]
+[node name="Head" type="Sprite2D" parent="The Guy" unique_id=172076862]
 position = Vector2(167, 160)
 texture = ExtResource("2_xh85e")
+script = ExtResource("4_p03fn")
+metadata/_custom_type_script = "uid://ct8k8umdc7fu4"
 
-[node name="Legs" type="Sprite2D" parent="The Guy" unique_id=711321324]
+[node name="Legs" type="Sprite2D" parent="The Guy" unique_id=1485967026]
 position = Vector2(169, 572)
 texture = ExtResource("3_7y4ks")
+script = ExtResource("4_p03fn")
+metadata/_custom_type_script = "uid://ct8k8umdc7fu4"
 
-[node name="Body" type="Sprite2D" parent="The Guy" unique_id=873543915]
+[node name="Body" type="Sprite2D" parent="The Guy" unique_id=2126542003]
 position = Vector2(145, 385)
 texture = ExtResource("4_04aby")
+script = ExtResource("4_p03fn")
+metadata/_custom_type_script = "uid://ct8k8umdc7fu4"
