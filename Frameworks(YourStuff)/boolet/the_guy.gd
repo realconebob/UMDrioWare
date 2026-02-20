@@ -25,12 +25,13 @@ func start() -> void:
 	
 	var boomtime: float = (5 / intensity)
 	var boomtimer := EvilTimer.new(boomtime, true, true)
+	
 	boomtimer.updated.connect(
-		func() -> void:
-			var _intensity: float = (boomtime - boomtimer.time_left) / boomtime
+		func(_delta: float) -> void:
+			var _intensity: float = (boomtime - boomtimer.time_left)
 			shotty.position = Vector2(
-				shotty_ogpos.x + randf_range(-_intensity * shotty.texture.get_width() / 2, _intensity * shotty.texture.get_width() / 2), 
-				shotty_ogpos.y + randf_range(-_intensity * shotty.texture.get_height() / 2, _intensity * shotty.texture.get_height() / 2)
+				shotty_ogpos.x + _delta * randf_range(-_intensity * shotty.texture.get_width() / 2, _intensity * shotty.texture.get_width() / 2), 
+				shotty_ogpos.y + _delta * randf_range(-_intensity * shotty.texture.get_height() / 2, _intensity * shotty.texture.get_height() / 2)
 			)
 			return
 	)
