@@ -11,7 +11,7 @@ extends Node2D
 func _setup(inten: float) -> void:
 	intensity = inten
 	
-	boomtime = (5 / intensity)
+	boomtime = (3 / intensity)
 	boomtimer = EvilTimer.new(boomtime, true, true)
 	boomtimer.updated.connect(
 		func(_delta: float) -> void:
@@ -51,5 +51,8 @@ func start() -> void:
 			var real := (child as MovingSprite2D)
 			real.set_velocity(-boomvel * (shotty.position - real.position).normalized()) 
 	shotty.set_velocity(boomvel * Vector2(-1, 0).normalized())
+	$Shotty/Blast.visible = true
+
+	# TODO: Fire bullets from boolet pos & start game
 	
 	return
