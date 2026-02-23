@@ -3,7 +3,7 @@ extends Node2D
 @onready var intensity: float
 @onready var is_setup: bool = false
 
-@onready var shotty: MovingSprite2D = $Shotty
+@onready var shotty: MovingScreenSprite2D = $Shotty
 @onready var shotty_ogpos := Vector2(shotty.position)
 @onready var boomtime: float
 @onready var boomtimer: EvilTimer

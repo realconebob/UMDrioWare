@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dui1gu0s5q1qk"]
+
+[ext_resource type="Script" uid="uid://dn8sr2368m3m2" path="res://Frameworks(YourStuff)/boolet/moving_screen_sprite_2d.gd" id="1_u7qsh"]
+
+[node name="MovingScreenSprite2d" type="Sprite2D" unique_id=681992466]
+script = ExtResource("1_u7qsh")
+metadata/_custom_type_script = "uid://ct8k8umdc7fu4"
+
+[node name="Notifier" type="VisibleOnScreenNotifier2D" parent="." unique_id=1438877273]

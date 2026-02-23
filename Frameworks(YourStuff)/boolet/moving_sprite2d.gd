@@ -1,14 +1,12 @@
 class_name MovingSprite2D
 extends Sprite2D
 
-@onready var velocity: Vector2 = Vector2.ZERO
-@onready var acceleration: Vector2 = Vector2.ZERO
+@onready var velocity: Vector2
+@onready var acceleration: Vector2
 
-func _init() -> void:
-	return
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _init(initvel := Vector2.ZERO, initacc := Vector2.ZERO) -> void:
+	velocity = initvel
+	acceleration = initacc
 	return
 
 func _physics_process(delta: float) -> void:
